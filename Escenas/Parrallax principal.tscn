@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Escenas/Parrallax principal.gd" type="Script" id=1]
+[ext_resource path="res://Recursos/Imagenes/bg_layer1.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Imagenes/bg_layer2.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Imagenes/bg_layer3.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Imagenes/bg_layer4.png" type="Texture" id=5]
+
+[node name="Parrallax principal" type="ParallaxBackground"]
+script = ExtResource( 1 )
+velocidad = 130
+
+[node name="Fondo" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1008, 0 )
+
+[node name="Fondo imagen" type="TextureRect" parent="Fondo"]
+margin_top = -111.0
+margin_right = 1008.0
+margin_bottom = 897.0
+texture = ExtResource( 2 )
+
+[node name="Nubes" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 1004, 0 )
+
+[node name="Nubes imagen" type="TextureRect" parent="Nubes"]
+margin_top = -111.0
+margin_right = 1008.0
+margin_bottom = 897.0
+texture = ExtResource( 3 )
+
+[node name="Montanyas" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 1004, 0 )
+
+[node name="Montanyas imagen" type="TextureRect" parent="Montanyas"]
+margin_top = -111.0
+margin_right = 1008.0
+margin_bottom = 897.0
+texture = ExtResource( 4 )
+
+[node name="Montanyas cercas" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 1004, 0 )
+
+[node name="Montanyas cercas imagen" type="TextureRect" parent="Montanyas cercas"]
+margin_top = -111.0
+margin_right = 1008.0
+margin_bottom = 897.0
+texture = ExtResource( 5 )
